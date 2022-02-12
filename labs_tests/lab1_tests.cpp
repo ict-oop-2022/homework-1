@@ -1,9 +1,21 @@
 #include <gtest/gtest.h>
 
-#include "lab3/lab3_functions.h"
+#include "lab1_functions.h"
 
-TEST(CreateBackups, TwoRestorePointsAndThreeStoragesCreated) {
+TEST(CreatePolygonalChain, PerimeterCalculatedCorrectly) {
     
+}
+
+TEST(CreateClosedPlyChain, PerimeterAndAreaCalculatedCorrectly) {
+    
+}
+
+TEST(CreateSharpTriangle, RightTriangleCheckFailed_ThrowException) {
+    
+}
+
+TEST(CreateTrapezoid, PerimeterAndAreaCalculatedCorrectly){
+
 }
 
 
