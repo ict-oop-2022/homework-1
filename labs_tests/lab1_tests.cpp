@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "lab1_functions.h"
+#include "lab1/lab1_functions.h"
 
 TEST(CreatePolygonalChain, PerimeterCalculatedCorrectly) {
     
