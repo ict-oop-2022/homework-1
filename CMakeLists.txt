@@ -1,26 +1,6 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.21)
+project(Lab_1)
 
-project(ict-homework-1 LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
 
-# set the C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-# place binaries and libraries according to GNU standards
-include(GNUInstallDirs)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
-
-# we cannot analyse results without gcov
-find_program(GCOV_PATH gcov)
-if(NOT GCOV_PATH)
-  message(FATAL_ERROR "Code coverage analysis requires gcov!")
-endif()
-
-add_subdirectory(labs_src)
-
-enable_testing()
-
-add_subdirectory(labs_tests)
+add_executable(Lab_1 main.cpp Point.h Point.cpp Point.h BrokenLine.cpp BrokenLine.h cmake-build-debug/Lock_BrokenLine.cpp cmake-build-debug/Lock_BrokenLine.h Polygon.cpp Polygon.h Triangle.cpp Triangle.h Trapezoid.cpp Trapezoid.h Regular_Polygon.cpp Regular_Polygon.h)
